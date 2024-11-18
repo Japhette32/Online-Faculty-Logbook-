@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Schedule</title>
+    <link rel="stylesheet" href="teacher.css">
+</head>
+<body>
+    <div class="nav">
+        <img src="Logo.png" alt="Umak Logo">
+        <img src="OSHO-LOGO.webp" alt="OSHO logo">
+        <h2>Online Faculty Logbook</h2>
+        <div class="line"></div>
+        <ul>
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="teacher.html" class="active">Your Schedule</a></li>
+            <li><a href="teachersched.html">Faculty Schedule and Staff</a></li>
+            <li><a href="facultymap.html">Faculty Map</a></li>
+        </ul>
+        <a href="index.html" class="logout-btn">Log Out</a>
+    </div>
+    <div class="container">
+        <div class="account-info">
+            <h2 class="account-name">Welcome, Teacher</h2>
+            <h3>Consultation Schedule:</h3>
+            <table class="consultation-table">
+                <thead>
+                    <tr>
+                        <th>Available Time</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>6:00 AM - 7:00 AM</td>
+                        <td></td>
+                        <td>
+                            <span class="tooltip">
+                                Section: G12 - 01 CPG<br>Student: Student1<br>Time: 06:30 PM<br>
+                                <button class="approve-btn" onclick="approveConsultation(this)">Approve</button>
+                                <button class="reject-btn" onclick="rejectConsultation(this)">Reject</button>
+                            </span>
+                            Pass requirements
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>7:00 AM - 8:00 AM</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>8:00 AM - 9:00 AM</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>9:00 AM - 10:00 AM</td>
+                        <td>
+                            <span class="tooltip">
+                                Section: G12 - 01 CPG<br>Student: Student2<br>Time: 09:30 PM<br>
+                                <button class="approve-btn" onclick="approveConsultation(this)">Approve</button>
+                                <button class="reject-btn" onclick="rejectConsultation(this)">Reject</button>
+                            </span>
+                            Pass requirements
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>10:00 AM - 11:00 AM</td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <span class="tooltip">
+                                Section: G12 - 01 CPG<br>Student: Student3<br>Time: 10:30 PM<br>
+                                <button class="approve-btn" onclick="approveConsultation(this)">Approve</button>
+                                <button class="reject-btn" onclick="rejectConsultation(this)">Reject</button>
+                            </span>
+                            Ask about research
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>11:00 AM - 12:00 PM</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        function approveConsultation(button) {
+            alert("Consultation approved.");
+        }
+
+        function rejectConsultation(button) {
+            var reason = prompt("Please enter the reason for rejection:");
+            if (reason) {
+                var tooltip = button.parentElement;
+                tooltip.innerHTML += "<br>Rejection Reason: " + reason;
+            }
+        }
+    </script>
+
+    <footer class="footer">
+        <div class="info">
+            <h2>Contact OHSO</h2>
+            <span class="ohsologo"><img src="OSHO-LOGO.webp"></span>
+            <br>
+            <ul>
+                <li>
+                    <div class="footer-item">
+                        <img src="gmail.png">
+                        <span>ohso@umak.edu.ph</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="footer-item">
+                        <img src="map.png">
+                        <span>J.P. Rizal Extn. West Rembo, Makati, Philippines, 1215</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="footer-item">
+                        <img src="phone-call.png">
+                        <span>288820535</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="footer-item">
+                        <img src="facebook.png">
+                        <span>UMak Occupational Health and Safety Office</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
